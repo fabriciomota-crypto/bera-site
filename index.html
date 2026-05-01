@@ -2,6 +2,20 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="description" content="Bera Creative Studio — Sistemas criativos integrados. Identidade visual, audiovisual e web design para marcas que querem dominar a percepção. São Paulo, Brasil.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://bera.digital/">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bera.digital/">
+  <meta property="og:title" content="Bera Creative Studio — Domine a Percepção">
+  <meta property="og:description" content="Sistemas criativos integrados — identidade, motion e digital numa execução precisa e evolutiva. Elevamos marcas ao próximo nível.">
+  <meta property="og:image" content="https://bera.digital/Hero01.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bera Creative Studio — Domine a Percepção">
+  <meta name="twitter:description" content="Sistemas criativos integrados — identidade, motion e digital numa execução precisa e evolutiva.">
+  <meta name="twitter:image" content="https://bera.digital/Hero01.jpg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bera Creative Studio</title>
   <style>
@@ -186,12 +200,12 @@
     .copy-mark {
       font-family: var(--font);
       font-style: normal;
-      font-weight: 500;
-      font-size: .38em;
-      vertical-align: super;
+      font-weight: 300;
+      font-size: .8em;
+      vertical-align: baseline;
       color: var(--fg);
-      margin-left: .08em;
-      opacity: .75;
+      margin-left: .1em;
+      opacity: .9;
     }
     .hero-h1 .serif { font-family: var(--font-serif); font-style: italic; font-weight: 400; color: var(--fg); }
 
@@ -359,7 +373,7 @@
     .cases-all { color:var(--teal); font-size:.82rem; font-weight:700; letter-spacing:.06em; transition:gap .2s; display:flex; align-items:center; gap:.45rem; flex-shrink:0; margin-bottom:.4rem; }
     .cases-all:hover { gap:.7rem; }
 
-    .cases-grid { display:grid; grid-template-columns:1.65fr 1fr 1fr; gap:1.25rem; }
+    .cases-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:1.25rem; }
 
     .case-card {
       background: var(--surface2);
@@ -370,8 +384,7 @@
     }
     .case-card:hover { transform: translateY(-5px); border-color: rgba(78,201,176,.2); }
 
-    .case-thumb { aspect-ratio:16/10; position:relative; overflow:hidden; }
-    .case-card:nth-child(n+2) .case-thumb { aspect-ratio:4/3; }
+    .case-thumb { aspect-ratio:16/9; position:relative; overflow:hidden; }
 
     .case-thumb-bg { position:absolute; inset:0; }
     .case-card:nth-child(1) .case-thumb-bg { background:linear-gradient(145deg,#0a0a1e 0%,#1a2060 55%,#0a0e28 100%); }
@@ -448,7 +461,7 @@
       background: linear-gradient(135deg, rgba(78,201,176,.06) 0%, rgba(48,62,152,.06) 100%);
       border: 1px solid rgba(78,201,176,.12);
       border-radius: calc(var(--radius)*4);
-      padding: 7rem 4rem;
+      padding: 4rem 4rem;
       text-align: center; position: relative; overflow: hidden;
     }
     .cta-orb {
@@ -456,9 +469,9 @@
       background: radial-gradient(ellipse 55% 55% at 50% 50%, rgba(78,201,176,.1) 0%, transparent 70%);
       pointer-events: none;
     }
-    .cta-h { font-size:clamp(2.25rem,5.5vw,5rem); font-weight:700; letter-spacing:-.05em; line-height:1.02; color:var(--fg); margin-bottom:1.25rem; position:relative; }
+    .cta-h { font-size:clamp(2.1rem,4.2vw,3.9rem); font-weight:700; letter-spacing:-.04em; line-height:1.05; color:var(--fg); margin-bottom:1rem; position:relative; }
     .cta-h .hl { color:var(--teal); }
-    .cta-sub { font-size:1.1rem; font-weight:400; line-height:1.6; color:var(--fg2); max-width:480px; margin:0 auto 2.75rem; position:relative; }
+    .cta-sub { font-size:0.95rem; font-weight:400; line-height:1.6; color:var(--fg2); max-width:480px; margin:0 auto 1.75rem; position:relative; }
     .cta-btns { display:flex; gap:1rem; justify-content:center; position:relative; }
     .btn-outline {
       border: 1.5px solid var(--border2);
@@ -714,22 +727,16 @@
       z-index: 2; cursor: pointer;
     }
     .case-play-circle {
-      width: 64px; height: 64px;
-      background: rgba(255,255,255,.12);
-      backdrop-filter: blur(12px);
-      border: 1.5px solid rgba(255,255,255,.25);
-      border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
-      transition: transform .25s, background .25s;
+      transition: transform .25s, opacity .25s;
     }
     .case-play-btn:hover .case-play-circle {
-      transform: scale(1.12);
-      background: rgba(78,201,176,.25);
-      border-color: var(--teal);
+      transform: scale(1.15);
+      opacity: 0.85;
     }
     .case-play-circle svg {
-      width: 22px; height: 22px; fill: #fff;
-      margin-left: 3px;
+      width: 52px; height: 52px; fill: rgba(255,255,255,0.9);
+      filter: drop-shadow(0 2px 12px rgba(0,0,0,0.5));
     }
     .case-play-label {
       position: absolute; bottom: 1rem; left: 1.1rem;
@@ -825,7 +832,113 @@
       body { cursor:auto; }
       a, button { cursor:pointer; }
     }
-  </style>
+
+/* Grain texture overlay */
+.grain-overlay {
+  position: relative;
+  overflow: hidden;
+}
+.grain-overlay::after {
+  content: '';
+  position: absolute;
+  inset: -50%;
+  width: 200%;
+  height: 200%;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
+/* Parallax base */
+.parallax-bg {
+  position: relative;
+  overflow: hidden;
+}
+.parallax-layer {
+  position: absolute;
+  inset: -20%;
+  width: 100%;
+  height: 140%;
+  background-size: cover;
+  background-position: center;
+  will-change: transform;
+  z-index: 0;
+}
+.parallax-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Serviços com visual aprimorado */
+.svc-card-visual {
+  width: 100%;
+  height: 180px;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  position: relative;
+}
+.svc-card-visual-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.svc-card-visual-icon {
+  font-size: 3rem;
+  opacity: 0.15;
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1rem;
+}
+
+/* Bastidor section */
+.bastidor-section {
+  padding: 6rem 0;
+  position: relative;
+}
+.bastidor-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 3rem;
+}
+.bastidor-item {
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bastidor-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+.bastidor-item:hover img {
+  transform: scale(1.05);
+}
+.bastidor-placeholder {
+  color: rgba(255,255,255,0.2);
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  .bastidor-grid { grid-template-columns: repeat(2, 1fr); }
+}
+  </style>>
 </head>
 <body>
 
@@ -847,9 +960,10 @@
     </svg>
   </a>
   <ul class="nav-links">
+    <li><a href="#sobre">Sobre</a></li>
     <li><a href="#servicos">Serviços</a></li>
     <li><a href="#cases">Cases</a></li>
-    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#equipe">Equipe</a></li>
     <li><a href="#contato">Contato</a></li>
   </ul>
   <a href="#contato" class="nav-cta">Fale Conosco</a>
@@ -956,11 +1070,10 @@
 
       <div class="svc-card rv d1">
         <div class="svc-num">01</div>
-        <div class="svc-icon">
-          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42"/>
-          </svg>
+        <div class="svc-icon" style="background:transparent; border:none; margin-bottom:1.5rem;">
+          <svg viewBox="0 0 80 80" width="56" height="56" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="30" fill="none" stroke="#00e5c8" stroke-width="1.5"/><circle cx="40" cy="40" r="18" fill="none" stroke="#00e5c8" stroke-width="1"/><line x1="10" y1="40" x2="70" y2="40" stroke="#00e5c8" stroke-width="1" opacity="0.5"/><line x1="40" y1="10" x2="40" y2="70" stroke="#00e5c8" stroke-width="1" opacity="0.5"/><polygon points="40,20 55,60 25,60" fill="rgba(0,229,200,0.12)" stroke="#00e5c8" stroke-width="1.5"/></svg>
         </div>
+
         <h3 class="svc-name">Identidade Visual</h3>
         <p class="svc-desc">Sistemas visuais completos construídos para serem inconfundíveis em qualquer ponto de contato. Marca, logo, cores, tipografia e aplicações.</p>
         <div class="svc-tags">
@@ -972,11 +1085,10 @@
 
       <div class="svc-card rv d2">
         <div class="svc-num">02</div>
-        <div class="svc-icon">
-          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.375 19.5h17.25m-17.25 0a1.125 1.125 0 01-1.125-1.125M3.375 19.5h1.5C5.496 19.5 6 18.996 6 18.375m-3.75.125V6a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0120.25 6v12.375m-3.75-3.25H7.5"/>
-          </svg>
+        <div class="svc-icon" style="background:transparent; border:none; margin-bottom:1.5rem;">
+          <svg viewBox="0 0 80 80" width="56" height="56" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="22" width="44" height="32" rx="3" fill="none" stroke="#00e5c8" stroke-width="1.5"/><polygon points="56,28 72,40 56,52" fill="rgba(0,229,200,0.12)" stroke="#00e5c8" stroke-width="1.5"/><circle cx="30" cy="38" r="8" fill="rgba(0,229,200,0.08)" stroke="#00e5c8" stroke-width="1"/><polygon points="27,34 27,42 35,38" fill="#00e5c8" opacity="0.6"/></svg>
         </div>
+
         <h3 class="svc-name">Audiovisual</h3>
         <p class="svc-desc">Produção de vídeo, motion design e fotografia que transformam sua história em narrativas memoráveis e impactantes para qualquer tela.</p>
         <div class="svc-tags">
@@ -988,11 +1100,10 @@
 
       <div class="svc-card rv d3">
         <div class="svc-num">03</div>
-        <div class="svc-icon">
-          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z"/>
-          </svg>
+        <div class="svc-icon" style="background:transparent; border:none; margin-bottom:1.5rem;">
+          <svg viewBox="0 0 80 80" width="56" height="56" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="14" width="64" height="44" rx="4" fill="none" stroke="#00e5c8" stroke-width="1.5"/><line x1="8" y1="26" x2="72" y2="26" stroke="#00e5c8" stroke-width="1"/><circle cx="17" cy="20" r="2" fill="#00e5c8" opacity="0.6"/><circle cx="24" cy="20" r="2" fill="#00e5c8" opacity="0.4"/><circle cx="31" cy="20" r="2" fill="#00e5c8" opacity="0.3"/><rect x="16" y="34" width="20" height="16" rx="2" fill="rgba(0,229,200,0.1)" stroke="#00e5c8" stroke-width="1"/><rect x="42" y="34" width="22" height="6" rx="1" fill="rgba(0,229,200,0.15)" stroke="#00e5c8" stroke-width="1"/><rect x="42" y="44" width="14" height="6" rx="1" fill="rgba(0,229,200,0.1)" stroke="#00e5c8" stroke-width="1" opacity="0.6"/></svg>
         </div>
+
         <h3 class="svc-name">Web &amp; Digital</h3>
         <p class="svc-desc">Sites e campanhas de alta performance construídos para converter atenção em resultado real. UX, UI e desenvolvimento integrados.</p>
         <div class="svc-tags">
@@ -1007,7 +1118,7 @@
 </section>
 
 <!-- ═══ CASES ═══ -->
-<section class="cases" id="cases">
+<section class="cases grain-overlay" id="cases">
   <div class="inner">
     <div class="cases-head rv">
       <div>
@@ -1019,8 +1130,8 @@
     <div class="cases-grid">
 
       <div class="case-card rv d1" id="case-innovare">
-        <div class="case-thumb" style="cursor:pointer;" onclick="openLightbox()">
-          <div class="case-thumb-yt"></div>
+        <div class="case-thumb" style="cursor:pointer;" onclick="openLightbox('nJL4dQy9QiA')">
+          <div class="case-thumb-yt" style="background-image:url('https://img.youtube.com/vi/nJL4dQy9QiA/maxresdefault.jpg');background-size:cover;background-position:center;"></div>
           <div class="case-play-btn">
             <div class="case-play-circle">
               <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
@@ -1030,36 +1141,40 @@
         </div>
         <div class="case-body">
           <div class="case-tags"><span class="ctag">Audiovisual</span></div>
-          <h3 class="case-name">Cliente: Zagross Itália</h3>
+          <h3 class="case-name"><span style="font-weight:300;">Cliente: </span><span style="font-weight:700;">Innovare</span><span class="case-metric" style="display:inline-block;margin-left:1rem;background:rgba(0,229,200,0.1);padding:0.25rem 0.75rem;border-radius:4px;font-size:0.8rem;color:#00e5c8;font-weight:700;">+2.5M views</span></h3>
         </div>
       </div>
 
       <div class="case-card rv d2">
-        <div class="case-thumb">
-          <div class="case-thumb-bg">
-            <div class="case-stripe"></div>
-            <div class="case-glow"></div>
+        <div class="case-thumb" style="cursor:pointer;" onclick="openLightbox('JSitYXHColY')">
+          <div class="case-thumb-yt" style="background-image:url('https://img.youtube.com/vi/JSitYXHColY/maxresdefault.jpg');background-size:cover;background-position:center;"></div>
+          <div class="case-play-btn">
+            <div class="case-play-circle">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
           </div>
-          <span class="case-lbl">vídeo · case 02</span>
+          <span class="case-play-label">Assistir case</span>
         </div>
         <div class="case-body">
-          <div class="case-tags"><span class="ctag">Campanha</span><span class="ctag">Social</span></div>
-          <h3 class="case-name">Campanha de Lançamento</h3>
-          <p class="case-meta">Estratégia &amp; Conteúdo · 2024</p>
+          <div class="case-tags"><span class="ctag">Audiovisual</span></div>
+          <h3 class="case-name"><span style="font-weight:300;">Cliente: </span><span style="font-weight:700;">Zagross Itália</span><span class="case-metric" style="display:inline-block;margin-left:1rem;background:rgba(0,229,200,0.1);padding:0.25rem 0.75rem;border-radius:4px;font-size:0.8rem;color:#00e5c8;font-weight:700;">+2.5M views</span></h3>
+          <p class="case-meta">Produção Audiovisual · 2024</p>
         </div>
       </div>
 
       <div class="case-card rv d3">
-        <div class="case-thumb">
-          <div class="case-thumb-bg">
-            <div class="case-stripe"></div>
-            <div class="case-glow"></div>
+        <div class="case-thumb" style="cursor:pointer;" onclick="openLightbox('5apaPhP1FGk')">
+          <div class="case-thumb-yt" style="background-image:url('https://img.youtube.com/vi/5apaPhP1FGk/maxresdefault.jpg');background-size:cover;background-position:center;"></div>
+          <div class="case-play-btn">
+            <div class="case-play-circle">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
           </div>
-          <span class="case-lbl">vídeo · case 03</span>
+          <span class="case-play-label">Assistir case</span>
         </div>
         <div class="case-body">
-          <div class="case-tags"><span class="ctag">Vídeo</span><span class="ctag">Motion</span></div>
-          <h3 class="case-name">Audiovisual Institucional</h3>
+          <div class="case-tags"><span class="ctag">Audiovisual</span></div>
+          <h3 class="case-name"><span style="font-weight:300;">Cliente: </span><span style="font-weight:700;">Guidoni</span><span class="case-metric" style="display:inline-block;margin-left:1rem;background:rgba(0,229,200,0.1);padding:0.25rem 0.75rem;border-radius:4px;font-size:0.8rem;color:#00e5c8;font-weight:700;">+40% conversão</span></h3>
           <p class="case-meta">Produção &amp; Motion · 2024</p>
         </div>
       </div>
@@ -1068,13 +1183,98 @@
   </div>
 </section>
 
+<!-- ═══ SOBRE ═══ -->
+<section style="padding: 8rem 0; background: #0a0a0a; position: relative; overflow: hidden;" id="sobre">
+  <!-- Elemento decorativo de fundo -->
+  <div style="position:absolute; top:-200px; right:-200px; width:600px; height:600px; border-radius:50%; background: radial-gradient(circle, rgba(0,229,200,0.04) 0%, transparent 70%); pointer-events:none;"></div>
+
+  <div class="inner">
+    <!-- Label -->
+    <span class="s-label" style="display:block; margin-bottom: 3rem;">A Bera</span>
+
+    <!-- Headline principal -->
+    <div style="max-width: 860px; margin-bottom: 5rem;">
+      <h2 style="font-size: clamp(2.4rem, 5vw, 5rem); font-weight: 800; line-height: 1.05; letter-spacing: -0.03em; color: #fff; margin-bottom: 0;">
+        Percepção não é acaso.<br>
+        <em style="font-style: italic; color: #00e5c8; font-family: var(--font-serif, Georgia, serif);">É construção.</em>
+      </h2>
+    </div>
+
+    <!-- Corpo do texto em 2 colunas -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-bottom: 5rem; align-items: start;">
+      <div>
+        <p style="font-size: clamp(1rem, 1.4vw, 1.2rem); color: rgba(255,255,255,0.75); line-height: 1.8; margin-bottom: 1.8rem;">
+          A Bera Creative Studio existe para transformar a forma como marcas são vistas, entendidas e lembradas.
+        </p>
+        <p style="font-size: 1rem; color: rgba(255,255,255,0.5); line-height: 1.8; margin-bottom: 1.8rem;">
+          Nascemos do audiovisual, onde cada detalhe importa. Luz, ritmo, enquadramento, intenção. Com o tempo, levamos essa mesma precisão para algo maior: <strong style="color:rgba(255,255,255,0.8); font-weight:500;">estratégia.</strong>
+        </p>
+        <p style="font-size: 1rem; color: rgba(255,255,255,0.5); line-height: 1.8;">
+          Hoje, unimos direção criativa, produção e marketing para construir presença com significado. Não criamos por volume. Criamos com propósito.
+        </p>
+      </div>
+      <div>
+        <p style="font-size: 1rem; color: rgba(255,255,255,0.5); line-height: 1.8; margin-bottom: 1.8rem;">
+          Cada projeto começa com uma pergunta simples: <em style="color: rgba(255,255,255,0.75); font-style:italic;">como essa marca deve ser percebida?</em> A partir disso, tudo ganha direção.
+        </p>
+        <p style="font-size: 1rem; color: rgba(255,255,255,0.5); line-height: 1.8; margin-bottom: 1.8rem;">
+          A estética deixa de ser apenas visual e passa a ser funcional. A comunicação deixa de ser genérica e passa a ser posicionamento.
+        </p>
+        <p style="font-size: 1rem; color: rgba(255,255,255,0.5); line-height: 1.8;">
+          Trabalhamos com empresas que valorizam clareza, consistência e qualidade — não como diferencial, mas como <strong style="color:rgba(255,255,255,0.8); font-weight:500;">base.</strong>
+        </p>
+      </div>
+    </div>
+
+    <!-- Frase de fechamento em destaque -->
+    <div style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 3rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 2rem;">
+      <p style="font-size: clamp(1.1rem, 2vw, 1.5rem); color: rgba(255,255,255,0.85); line-height: 1.5; max-width: 640px; font-weight: 300;">
+        Nosso papel é tornar isso visível. De forma <strong style="font-weight:700; color:#fff;">precisa</strong>, <strong style="font-weight:700; color:#fff;">relevante</strong> e sustentável no longo prazo.
+      </p>
+      <div style="flex-shrink:0;">
+        <a href="#contato" class="btn-primary" style="display:inline-block;">Iniciar Projeto ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ═══ PROCESS ═══ -->
-<section class="process" id="sobre">
+<section class="process" id="sobre-metodo">
   <div class="inner">
     <div class="proc-head rv">
       <span class="s-label">Como Trabalhamos</span>
       <h2 class="section-title">Método que<br><span class="hl">gera resultado.</span></h2>
+    <div class="team-section" id="equipe" style="margin-top: 5rem; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 4rem;">
+  <p style="font-size: 0.8rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem;">Quem faz acontecer</p>
+  <h3 style="font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 800; margin-bottom: 0.5rem; color: #fff; line-height: 1.2;">Pessoas reais.<br><em style="font-style:italic; color: #00e5c8;">Resultados concretos.</em></h3>
+  <p style="color: rgba(255,255,255,0.6); max-width: 560px; line-height: 1.7; margin-bottom: 3rem;">Por trás de cada entrega existe um time obcecado por qualidade, estratégia e execução. Não terceirizamos — cada projeto é conduzido de ponta a ponta por quem realmente entende da marca.</p>
+
+  <div style="display: grid; grid-template-columns: repeat(2, minmax(280px, 340px)); gap: 1.5rem; max-width: 720px; margin: 0 auto; justify-content: center;">
+
+    <!-- Fabricio -->
+    <div style="position: relative; border-radius: 16px; overflow: hidden; aspect-ratio: 3/4; background: #111;">
+      <img src="fabricio.jpg" alt="Fabricio Mota"
+           style="width:100%; height:100%; object-fit:cover; object-position:center top; display:block; filter: grayscale(20%);">
+      <div style="position:absolute; inset:0; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 50%, transparent 100%);"></div>
+      <div style="position:absolute; bottom:0; left:0; padding: 1.5rem;">
+        <p style="font-weight: 800; font-size: 1.15rem; color: #fff; margin: 0 0 0.3rem; line-height:1.2;">Fabricio Mota</p>
+        <p style="font-size: 0.8rem; color: #00e5c8; margin: 0; letter-spacing: 0.03em;">Co-Fundador & Diretor de Marketing</p>
+      </div>
     </div>
+
+    <!-- Thiago Có -->
+    <div style="position: relative; border-radius: 16px; overflow: hidden; aspect-ratio: 3/4; background: #111;">
+      <img src="thiago.jpg" alt="Thiago Có"
+           style="width:100%; height:100%; object-fit:cover; object-position:center 45%; display:block; filter: grayscale(20%); transform: scale(1.35); transform-origin: center 45%;">
+      <div style="position:absolute; inset:0; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 50%, transparent 100%);"></div>
+      <div style="position:absolute; bottom:0; left:0; padding: 1.5rem;">
+        <p style="font-weight: 800; font-size: 1.15rem; color: #fff; margin: 0 0 0.3rem; line-height:1.2;">Thiago Có</p>
+        <p style="font-size: 0.8rem; color: #00e5c8; margin: 0; letter-spacing: 0.03em;">Co-Fundador & Diretor Comercial</p>
+      </div>
+    </div>
+
+  </div>
+</div></div>
     <div class="proc-grid">
       <div class="proc-step rv d1">
         <div class="proc-num">01</div>
@@ -1122,9 +1322,116 @@
       <a href="mailto:contato@bera.digital" class="btn-primary">contato@bera.digital</a>
       <a href="https://wa.me/5511968643192" target="_blank" class="btn-outline">WhatsApp</a>
     </div>
+
+<div class="contact-form-wrapper" style="margin-top: 2rem; width: 100%; max-width: 560px; margin-left: auto; margin-right: auto;">
+  <form class="contact-form" id="contactForm" style="display: flex; flex-direction: column; gap: 0.9rem;">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+      <div style="display: flex; flex-direction: column; gap: 0.3rem;">
+        <label style="font-size: 0.72rem; color: rgba(255,255,255,0.5); text-align: left;">Nome *</label>
+        <input type="text" name="nome" required placeholder="Seu nome" style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; padding: 0.5rem 0.75rem; color: #fff; font-size: 0.85rem; outline: none; transition: border-color 0.2s;" onfocus="this.style.borderColor='#00e5c8'" onblur="this.style.borderColor='rgba(255,255,255,0.1)'">
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 0.3rem;">
+        <label style="font-size: 0.72rem; color: rgba(255,255,255,0.5); text-align: left;">Email *</label>
+        <input type="email" name="email" required placeholder="seu@email.com" style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; padding: 0.5rem 0.75rem; color: #fff; font-size: 0.85rem; outline: none; transition: border-color 0.2s;" onfocus="this.style.borderColor='#00e5c8'" onblur="this.style.borderColor='rgba(255,255,255,0.1)'">
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 0.3rem;">
+      <label style="font-size: 0.72rem; color: rgba(255,255,255,0.5); text-align: left;">Tipo de projeto</label>
+      <select name="projeto" style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; padding: 0.5rem 0.75rem; color: #fff; font-size: 0.85rem; outline: none; cursor: pointer; transition: border-color 0.2s;" onfocus="this.style.borderColor='#00e5c8'" onblur="this.style.borderColor='rgba(255,255,255,0.1)'">
+        <option value="" style="background: #111;">Selecione o tipo de projeto</option>
+        <option value="identidade" style="background: #111;">Identidade Visual</option>
+        <option value="audiovisual" style="background: #111;">Audiovisual / Motion</option>
+        <option value="web" style="background: #111;">Web & Digital</option>
+        <option value="completo" style="background: #111;">Sistema Completo de Marca</option>
+        <option value="outro" style="background: #111;">Outro</option>
+      </select>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 0.3rem;">
+      <label style="font-size: 0.72rem; color: rgba(255,255,255,0.5); text-align: left;">Orçamento estimado</label>
+      <select name="orcamento" style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; padding: 0.5rem 0.75rem; color: #fff; font-size: 0.85rem; outline: none; cursor: pointer; transition: border-color 0.2s;" onfocus="this.style.borderColor='#00e5c8'" onblur="this.style.borderColor='rgba(255,255,255,0.1)'">
+        <option value="" style="background: #111;">Selecione o orçamento</option>
+        <option value="ate5k" style="background: #111;">Até R$ 5.000</option>
+        <option value="5k-15k" style="background: #111;">R$ 5.000 – R$ 15.000</option>
+        <option value="15k-30k" style="background: #111;">R$ 15.000 – R$ 30.000</option>
+        <option value="acima30k" style="background: #111;">Acima de R$ 30.000</option>
+        <option value="conversar" style="background: #111;">Prefiro conversar antes</option>
+      </select>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 0.3rem;">
+      <label style="font-size: 0.72rem; color: rgba(255,255,255,0.5); text-align: left;">Mensagem</label>
+      <textarea name="mensagem" rows="4" placeholder="Conte um pouco sobre o seu projeto..." style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; padding: 0.5rem 0.75rem; color: #fff; font-size: 0.85rem; outline: none; resize: vertical; font-family: inherit; transition: border-color 0.2s;" onfocus="this.style.borderColor='#00e5c8'" onblur="this.style.borderColor='rgba(255,255,255,0.1)'"></textarea>
+    </div>
+    <button type="submit" style="background: #00e5c8; color: #000; border: none; border-radius: 6px; padding: 0.65rem 1.5rem; font-size: 0.85rem; font-weight: 700; cursor: pointer; letter-spacing: 0.02em; transition: opacity 0.2s; align-self: flex-start; margin-top: 0.4rem;" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+      Enviar mensagem ↗
+    </button>
+    <p style="font-size: 0.65rem; color: rgba(255,255,255,0.3);">* Respondemos em até 24h · Seus dados são confidenciais</p>
+  </form>
+  <div id="formSuccess" style="display:none; background: rgba(0,229,200,0.1); border: 1px solid #00e5c8; border-radius: 8px; padding: 2rem; text-align: center; color: #00e5c8;">
+    <p style="font-size: 1.2rem; font-weight: 700; margin: 0 0 0.5rem;">Mensagem enviada! ✓</p>
+    <p style="margin: 0; color: rgba(255,255,255,0.7); font-size: 0.9rem;">Entraremos em contato em até 24h.</p>
+  </div>
+</div>
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const form = this;
+  const data = new FormData(form);
+  const body = Object.fromEntries(data.entries());
+  const subject = encodeURIComponent('Novo contato via site Bera — ' + (body.projeto || 'Projeto'));
+  const bodyText = encodeURIComponent(
+    'Nome: ' + body.nome + '
+' +
+    'Email: ' + body.email + '
+' +
+    'Projeto: ' + (body.projeto || '-') + '
+' +
+    'Orçamento: ' + (body.orcamento || '-') + '
+
+' +
+    'Mensagem:
+' + (body.mensagem || '-')
+  );
+  window.location.href = 'mailto:contato@bera.digital?subject=' + subject + '&body=' + bodyText;
+  form.style.display = 'none';
+  document.getElementById('formSuccess').style.display = 'block';
+});
+</script>
+
   </div>
 </section>
 
+
+<!-- ═══ BASTIDOR ═══ -->
+<section class="bastidor-section grain-overlay rv" style="background: #0a0a0a; position: relative; z-index: 2;">
+  <div class="inner">
+    <div class="cases-head rv">
+      <div>
+        <span class="s-label">Por dentro do estúdio</span>
+        <h2 class="section-title">Por trás<br>de cada<br><span class="dim">entrega.</span></h2>
+      </div>
+    </div>
+    <div class="bastidor-grid">
+      <div class="bastidor-item rv">
+        <div class="bastidor-placeholder">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <p style="margin-top:0.5rem;font-size:0.75rem;">Adicione bastidor01.jpg</p>
+        </div>
+      </div>
+      <div class="bastidor-item rv">
+        <div class="bastidor-placeholder">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <p style="margin-top:0.5rem;font-size:0.75rem;">Adicione bastidor02.jpg</p>
+        </div>
+      </div>
+      <div class="bastidor-item rv">
+        <div class="bastidor-placeholder">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <p style="margin-top:0.5rem;font-size:0.75rem;">Adicione bastidor03.jpg</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ═══ INSTAGRAM ═══ -->
 <section class="insta-section rv">
@@ -1261,7 +1568,7 @@
           <li><a href="#servicos">Serviços</a></li>
           <li><a href="#cases">Cases</a></li>
           <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#">Carreiras</a></li>
+          <li><a href="#" data-coming-soon="true" title="Em breve">Carreiras</a></li>
         </ul>
       </div>
 
@@ -1269,9 +1576,9 @@
       <div>
         <span class="ft-col-label">Conteúdos</span>
         <ul class="ft-nav-list">
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Podcast</a></li>
-          <li><a href="#">Newsletter</a></li>
+          <li><a href="#" data-coming-soon="true" title="Em breve">Blog</a></li>
+          <li><a href="#" data-coming-soon="true" title="Em breve">Podcast</a></li>
+          <li><a href="#" data-coming-soon="true" title="Em breve">Newsletter</a></li>
         </ul>
       </div>
 
@@ -1280,8 +1587,8 @@
         <span class="ft-col-label">Redes</span>
         <ul class="ft-nav-list">
           <li><a href="#">Instagram</a></li>
-          <li><a href="#">LinkedIn</a></li>
-          <li><a href="#">YouTube</a></li>
+          <li><a href="https://www.linkedin.com/company/beracreativestudio">LinkedIn</a></li>
+          <li><a href="https://www.youtube.com/@beracreativestudio">YouTube</a></li>
           <li><a href="#">WhatsApp</a></li>
         </ul>
       </div>
@@ -1290,7 +1597,7 @@
 
     <!-- Barra inferior -->
     <div class="ft-bot">
-      <p class="ft-copy">© 2025 Bera Creative Studio · Brazil</p>
+      <p class="ft-copy">© 2026 Bera Creative Studio · Brazil</p>
       <ul class="ft-legal">
         <li><a href="#">Privacidade</a></li>
         <li><a href="#">Termos</a></li>
@@ -1341,10 +1648,10 @@
   /* Elfsight Instagram widget — navegação gerenciada pelo próprio widget */
 
   /* Lightbox */
-  function openLightbox() {
+  function openLightbox(videoId) {
     const overlay = document.getElementById('lb-overlay');
     const iframe  = document.getElementById('lb-iframe');
-    iframe.src = 'https://www.youtube.com/embed/JSitYXHColY?autoplay=1&rel=0&modestbranding=1';
+    iframe.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0&modestbranding=1';
     overlay.classList.add('open');
     document.body.style.overflow = 'hidden';
   }
@@ -1361,6 +1668,38 @@
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
 
 
+</script>
+
+<script>
+// Parallax suave nas seções
+(function() {
+  const parallaxSections = document.querySelectorAll('.parallax-bg');
+  if (!parallaxSections.length) return;
+  
+  let ticking = false;
+  
+  function updateParallax() {
+    const scrollY = window.scrollY;
+    parallaxSections.forEach(function(section) {
+      const rect = section.getBoundingClientRect();
+      const sectionTop = rect.top + scrollY;
+      const relativeScroll = scrollY - sectionTop;
+      const speed = parseFloat(section.dataset.speed) || 0.3;
+      const bg = section.querySelector('.parallax-layer');
+      if (bg) {
+        bg.style.transform = 'translateY(' + (relativeScroll * speed) + 'px)';
+      }
+    });
+    ticking = false;
+  }
+  
+  window.addEventListener('scroll', function() {
+    if (!ticking) {
+      requestAnimationFrame(updateParallax);
+      ticking = true;
+    }
+  }, { passive: true });
+})();
 </script>
 </body>
 </html>
